@@ -1,0 +1,43 @@
+<img src="/Chaco2ed2.jpg" class="bg" alt="" />
+
+<header id="header-block">
+    <div class="header-text">
+      <h5 id="text-tensegrity">Tensegrity</h5>
+      <h5 id="text-nyc">NYC</h5>
+    </div>
+</header>
+
+
+<section ng-controller = "EmailsController">
+
+    <!-- Modal Trigger -->
+
+    <button data-target="email-signup-modal" class="waves-effect waves-orange btn-large text-transparent modal-trigger" id="join-list-btn">Join The Email List</button>
+
+
+
+
+    <!-- Modal Structure -->
+    <div id="email-signup-modal" class="modal">
+      <div class="modal-content">
+        <form ng-submit="createEmail()" id="email-signup-form">
+            <input type="text" ng-model="newEmail.first_name" placeholder="First Name">
+            <input type="text" ng-model="newEmail.last_name" placeholder="Last Name">
+            <input type="text" ng-model="newEmail.email" placeholder="Email Address">
+            <input type="text" ng-model="newEmail.city" placeholder="City">
+            <input type="text" ng-model="newEmail.state" placeholder="State">
+            <input type="text" ng-model="newEmail.country" placeholder="Country">
+            <input type="submit" value="Sign Up" class="modal-action modal-close" id="submit-btn">
+        </form>
+      </div>
+    </div>
+
+    <div id="confirmation-modal" class="modal">
+      <div class="modal-content">
+        <h3 id="confirmed">Email Sign Up Confirmed.</h3>
+        <br>
+        <h4 id="thank-you">Thank you for joining!</h4>
+      </div>
+    </div>
+
+  </section>
